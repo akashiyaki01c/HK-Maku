@@ -1,0 +1,20 @@
+11	普通	ふつう	Local	#222	#fff
+21	準急	じゅんきゅう	Semi-Exp.	#00854b	#fff
+22	通勤準急	つうきんじゅんきゅう	Commuter Semi-Exp.	#00854b	#fff
+22o	通勤準急	つうきんじゅんきゅう	Semi-Exp.	#00854b	#fff
+23	臨時準急	りんじじゅんきゅう	Semi-Exp.	#00854b	#fff
+31	急行	きゅうこう	Express	#ffca38	#222
+32	通勤急行	つうきんきゅうこう	Commuter Exp.	#ffca38	#222
+32o	通勤急行	つうきんきゅうこう	Express	#ffca38	#222
+33	臨時急行	りんじきゅうこう	Express	#ffca38	#222
+41	快速	かいそく	Rapid Service	#0d55ff	#fff
+42	快速急行	かいそくきゅうこう	Rapid Exp.	#ffca38	#222
+43	準特急	じゅんとっきゅう	Semi-Limited Exp.	#ff0d4e	#fff
+51	特急	とっきゅう	Limited Exp.	#ff0d4e	#fff
+52	通勤特急	つうきんとっきゅう	Commuter Limited Exp.	#ff0d4e	#fff
+52o	通勤特急	つうきんとっきゅう	Limited Exp.	#ff0d4e	#fff
+53	臨時特急	りんじとっきゅう	Limited Exp.	#ff0d4e	#fff
+61	快速特急	かいそくとっきゅう	Rapid Limited Exp.	#ff0d4e	#fff
+61o	快速特急	かいそくとっきゅう	Limited Exp.	#ff0d4e	#fff
+62	直通特急	ちょくつうとっきゅう	Direct Limited Exp.	#ff0d4e	#fff
+62o	直通特急	ちょくつうとっきゅう	Limited Exp.	#ff0d4e	#fff
