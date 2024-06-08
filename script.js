@@ -1,7 +1,7 @@
-/* import init, { svg_to_png } from "./wasm/pkg/wasm.js"; */
+import init, { svg_to_png } from "./pkg/wasm.js";
 
-/* init();
- */
+init();
+
 function getSpacing(str) {
 	switch (str.length) {
 		case 2:
@@ -80,7 +80,7 @@ function getSvgUrl() {
 	return `data:image/png;base64,${uint8ArrayToBase64(svgPng)}`;
 }
 
-/* document.querySelector("#input-generate").addEventListener('click', v => {
+document.querySelector("#input-generate").addEventListener('click', v => {
 	const svgUrl = getSvgUrl();
 	document.querySelector("#export-image").src = svgUrl;
-}); */
+});

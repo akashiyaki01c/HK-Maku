@@ -1,5 +1,5 @@
-import { getSvgString } from "./script.js";
-import { svg_to_png } from "./wasm/pkg/wasm.js";
+import { getSvgString } from "./script_deno.js";
+import { svg_to_png } from "./wasm/pkg_deno/wasm.js";
 
 type Station = {
 	number: string,

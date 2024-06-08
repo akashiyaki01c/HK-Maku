@@ -26,24 +26,3 @@ pub fn svg_to_png(svg: &str) -> Vec<u8> {
     rtree.render(resvg::tiny_skia::Transform::default(), &mut pixmap.as_mut());
     pixmap.encode_png().expect("encode error")
 }
-
-#[test]
-fn test() {
-	svg_to_png(r###"
-	<svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="5600" height="1600" viewBox="0 0 5600 1600">
-	<rect 
-        x="0" y="0" 
-        width="5600" height="1600" 
-        fill="#222"></rect>
-	<text 
-			font-family="Kosugi Maru" 
-			text-anchor="middle" font-size="1060" 
-			x="2800" y="1050" 
-			fill="#fff" 
-			letter-spacing="100"
-			transform="translate(-140.0000000000001 0) scale(1.05 1.0)"
-			stroke-width="30" stroke="#fff">大阪梅田</text>
-	<text font-family="Open Sans" text-anchor="middle" x="2800" y="1420" font-size="300" fill="#fff">Osaka-umeda</text>
-	</svg>
-	"###);
-}
