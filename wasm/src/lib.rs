@@ -9,9 +9,9 @@ static FONT_OPEN_SANS: &[u8] = include_bytes!("./fonts/OpenSans-Medium.ttf");
 pub fn svg_to_png(svg: &str) -> Vec<u8> {
     let rtree = {
         let mut opt = resvg::usvg::Options::default();
-        opt.image_rendering = ImageRendering::OptimizeSpeed;
-        opt.text_rendering = TextRendering::OptimizeSpeed;
-        opt.shape_rendering = ShapeRendering::OptimizeSpeed;
+        opt.image_rendering = ImageRendering::OptimizeQuality;
+        opt.text_rendering = TextRendering::GeometricPrecision;
+        opt.shape_rendering = ShapeRendering::GeometricPrecision;
 
         let mut fontdb = fontdb::Database::new();
         fontdb.load_system_fonts();

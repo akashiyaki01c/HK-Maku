@@ -30,11 +30,11 @@ function getTransformString(str, width) {
 	return `translate(${-width * (scale-1) * .5}) scale(${scale} 1.0)`;
 }
 
-export function getSvgString(destJa, destEn, backgroundColor, foregroundColor) {
-	const width = 5600;
-	const height = 1600;
+export function getSvgString(width, height, destJa, destEn, backgroundColor, foregroundColor) {
+	// const width = 5600;
+	// const height = 1600;
 	const destJaSpacing = getSpacing(destJa);
-	const borderString = `stroke-width="30" stroke="${foregroundColor}"`;
+	const borderString = `stroke-width="${height*0.01875}" stroke="${foregroundColor}"`;
 
 	return `<svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
 <rect 
@@ -43,18 +43,20 @@ export function getSvgString(destJa, destEn, backgroundColor, foregroundColor) {
 	fill="${backgroundColor}"></rect>
 <text 
 	font-family="Kosugi Maru" 
-	text-anchor="middle" font-size="1060" 
-	x="${width/2}" y="1050" 
+	text-anchor="middle" font-size="${height*0.6625}" 
+	x="${width/2}" y="${height*0.65625}" 
 	fill="${foregroundColor}" 
 	letter-spacing="${destJaSpacing}"
 	transform="${getTransformString(destJa, width)}"
 	${borderString}>${destJa}</text>
-<text font-family="Open Sans" text-anchor="middle" x="${width/2}" y="1420" font-size="300" fill="${foregroundColor}">${destEn}</text>
+<text font-family="Open Sans" text-anchor="middle" x="${width/2}" y="${height*0.8875}" font-size="${height*0.1875}" fill="${foregroundColor}">${destEn}</text>
 </svg>
 	`;
 }
 function getSvgStringWeb() {
 	return getSvgString(
+		document.querySelector("#input-width").value,
+		document.querySelector("#input-height").value,
 		document.querySelector("#input-dest-ja").value,
 		document.querySelector("#input-dest-en").value,
 		document.querySelector("#input-bg-color").value,
